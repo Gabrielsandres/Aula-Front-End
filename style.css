@@ -1,0 +1,110 @@
+*{
+    margin: 0;
+}
+
+.container{
+    width: 100%;
+}
+#cabecalho{
+    height: 100px;
+    background-color: darkblue;
+    display: flex;
+    justify-content: space-between;
+
+}
+#div-img{
+    height: 90px;
+    align-items: center;
+}
+#img-header{
+    width: 80px;
+    padding-top: 10px;
+    padding-left: 10px;
+}
+#div-nav{
+    width: 50%;
+}
+ul{
+    display: flex;
+    justify-content:end;
+}
+.link-nav{
+    list-style-type: none;
+    padding: 40px;
+    text-decoration: none;
+    color: aliceblue;
+    font-family: monospace;
+    font-size: 25px;
+}
+main{
+    background-image: url("https://img.freepik.com/free-photo/abstract-grunge-decorative-relief-navy-blue-stucco-wall-texture-wide-angle-rough-colored-background_1258-28311.jpg?w=2000");
+background-repeat: repeat-y;
+}
+#secao1{
+    height: 300px;
+    /*background-image: url("https://img.freepik.com/free-photo/abstract-grunge-decorative-relief-navy-blue-stucco-wall-texture-wide-angle-rough-colored-background_1258-28311.jpg?w=2000");*/
+}
+#secao2{
+    height: 300px;
+    /*background-color: yellow;*/
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    /*background-image: url("https://img.freepik.com/free-photo/abstract-grunge-decorative-relief-navy-blue-stucco-wall-texture-wide-angle-rough-colored-background_1258-28311.jpg?w=2000");*/
+
+}
+#box-esquerdo{
+    width: 25%;
+    height: 200px;
+    border: 1px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+#box-direito{
+    width: 25%;
+    height: 200px;
+    border: 1px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#secao3{
+    height: 300px;
+    /*background-color: green;*/
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+#box-esquerdo-secao3{
+    width: 25%;
+    height: 200px;
+    border: 1px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+#box-meio-secao3{
+    width: 25%;
+    height: 200px;
+    border: 1px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+#box-direito-secao3{
+    width: 25%;
+    height: 200px;
+    border: 1px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+#rodape{
+    height: 300px;
+    /*background-color: cadetblue ;*/
+}
