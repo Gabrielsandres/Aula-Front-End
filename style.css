@@ -1,110 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,700;1,200;1,500&display=swap');
 *{
+    padding: 0;
     margin: 0;
+    box-sizing: border-box;
 }
 
-.container{
-    width: 100%;
+html{
+    font-size: 10px;
+    scroll-behavior: smooth;
+    font-family: 'Poppins', 'Times New Roman', Times, serif  ;
+    z-index: 1;
 }
-#cabecalho{
-    height: 100px;
-    background-color: darkblue;
-    display: flex;
-    justify-content: space-between;
 
-}
-#div-img{
-    height: 90px;
-    align-items: center;
-}
-#img-header{
-    width: 80px;
-    padding-top: 10px;
-    padding-left: 10px;
-}
-#div-nav{
-    width: 50%;
-}
-ul{
-    display: flex;
-    justify-content:end;
-}
-.link-nav{
-    list-style-type: none;
-    padding: 40px;
+a{
     text-decoration: none;
-    color: aliceblue;
-    font-family: monospace;
-    font-size: 25px;
 }
-main{
-    background-image: url("https://img.freepik.com/free-photo/abstract-grunge-decorative-relief-navy-blue-stucco-wall-texture-wide-angle-rough-colored-background_1258-28311.jpg?w=2000");
-background-repeat: repeat-y;
-}
-#secao1{
-    height: 300px;
-    /*background-image: url("https://img.freepik.com/free-photo/abstract-grunge-decorative-relief-navy-blue-stucco-wall-texture-wide-angle-rough-colored-background_1258-28311.jpg?w=2000");*/
-}
-#secao2{
-    height: 300px;
-    /*background-color: yellow;*/
+.container {
+    min-height: 100vh;
+    width: 100%;
     display: flex;
-    justify-content: space-around;
     align-items: center;
-    /*background-image: url("https://img.freepik.com/free-photo/abstract-grunge-decorative-relief-navy-blue-stucco-wall-texture-wide-angle-rough-colored-background_1258-28311.jpg?w=2000");*/
+    justify-content: center;
+}
+
+#presentation {
+    background-image: url(background.webp);
+    background-size: cover;
+    background-position: top center;
+    
+    
+}
+
+#presentation h1 {
+    display: block;
+    width: fit-content;
+    font-size: 5rem;
+    position: relative;
+    color: transparent;
+  animation: text_reveal .5s ease forwards;
+  animation-delay: 1s;
+}
+
+#presentation .button {
+    display: inline-block;
+    padding: 10px 30px;
+    color: gold;
+    background-color: transparent;
+    border: 2px solid gold;
+    font-size: 2rem;
+    text-transform: uppercase;
+    letter-spacing: .1rem;
+    transition: .5s ease;
+    transition-property: background-color, color;
 
 }
-#box-esquerdo{
-    width: 25%;
-    height: 200px;
-    border: 1px solid black;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+
+#presentation .button:hover{
+    color: white;
+    font-weight: 500;
+    background-color: gold;
+  
+}
+
+#presentation h1 span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0%;
+    animation: text_reveal_box 1s ease ;
+    animation-delay: .5s;
+    background-color: gold;
+}
+#presentation h1:nth-child(1){
+    animation-delay: 0.5
+}
+#presentation h1:nth-child(2){
+    animation-delay: 0.8s;
+
+}
+#presentation h1:nth-child(3){
+  animation: text_reveal_name .5s ease forwards;  
+  animation-delay: 1s;
+
+}
+
+#presentation::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    opacity: 0.5;
+    z-index: -1 ;
     
 }
-#box-direito{
-    width: 25%;
-    height: 200px;
-    border: 1px solid black;
+#portfolio .project-info {
+    padding: 30px;
+    flex-basis: 50%;
+    height: 100%;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
+    flex-direction: column;
+    background-image: linear-gradient(60deg #5a10b5 0%, #002349 100%);
 }
-#secao3{
-    height: 300px;
-    /*background-color: green;*/
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+
+
+/*Keyframes*/
+@keyframes text_reveal {
+    100%{
+        color: white;
+    }
 }
-#box-esquerdo-secao3{
-    width: 25%;
-    height: 200px;
-    border: 1px solid black;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    
+@keyframes text_reveal_name{
+  100%{
+    color: gold;
+    font-weight: 10px;
+  }
 }
-#box-meio-secao3{
-    width: 25%;
-    height: 200px;
-    border: 1px solid black;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    
+@keyframes text_reveal_box {
+    50%{
+        width: 100%;
+        left: 0;
+
+    }
+    100%{
+        width: 0;
+        left: 100%;
+    }
 }
-#box-direito-secao3{
-    width: 25%;
-    height: 200px;
-    border: 1px solid black;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    
+
+#portfolio{
+    background-color: #2b2db0;
 }
-#rodape{
-    height: 300px;
-    /*background-color: cadetblue ;*/
-}
+
